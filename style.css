@@ -1,0 +1,56 @@
+body {
+            font-family: Arial, sans-serif;
+            background-image: url(./img/Imagem\ do\ WhatsApp\ de\ 2025-07-09\ à\(s\)\ 01.58.51_42388d6f.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        #lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            z-index: 999;
+            background: rgba(0, 0, 0, 0.5);
+            /* opcional: fundo escuro transparente */
+            padding: 6px;
+            border-radius: 8px;
+        }
+
+        .flag {
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 3px;
+        }
+
+        .flag.selected {
+            border-color: #007BFF;
+        }
+
+        #content {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        #content p {
+            color: aliceblue;
+        }
+
+        .logo img {
+            margin-top: 50px;
+            width: 200px;
+            height: 200px;
+            border-radius: 400px;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
