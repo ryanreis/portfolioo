@@ -7,7 +7,7 @@
     <title>Trocar idioma com bandeiras</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        
+
     </style>
 </head>
 
@@ -19,46 +19,27 @@
     </div>
 
     <div class="logo">
-        <img src="./img/Imagem do WhatsApp de 2025-07-09 à(s) 02.22.25_e7cdd725.jpg" alt="">
+        <img src="./img/Imagem do WhatsApp de 2025-07-09 à(s) 02.22.25_e7cdd725.jpg" alt="" class="flutuante">
     </div>
 
     <div id="content">
-        <p>Olá, seja bem-vindo ao meu portfólio!</p>
-        <p>Este texto está em português.</p>
+        <p>Ryan Dos Reis</p>
+        <div class="caixa">
+            <p>Sou um desenvolvedor web e programador com conhecimentos em HTML, CSS, JavaScript e Java. Tenho foco em
+                criar sites responsivos, funcionais e com boa experiência para o usuário, além de desenvolver soluções
+                em Java para aplicações mais robustas.</p>
+        </div>
     </div>
 
-    <script>
-        const brFlag = document.getElementById('br-flag');
-        const usFlag = document.getElementById('us-flag');
-        const content = document.getElementById('content');
-
-        brFlag.addEventListener('click', () => {
-            setLanguage('br');
-        });
-
-        usFlag.addEventListener('click', () => {
-            setLanguage('us');
-        });
-
-        function setLanguage(lang) {
-            if (lang === 'br') {
-                content.innerHTML = `
-        <p>Olá, seja bem-vindo ao meu portfólio!</p>
-        <p>Este texto está em português.</p>
-      `;
-                brFlag.classList.add('selected');
-                usFlag.classList.remove('selected');
-            } else if (lang === 'us') {
-                content.innerHTML = `
-        <p>Hello, welcome to my portfolio!</p>
-        <p>This text is in English.</p>
-      `;
-                usFlag.classList.add('selected');
-                brFlag.classList.remove('selected');
-            }
-        }
-    </script>
-
+    <section class="tela">
+        <div>
+            <h1>
+                Projetos
+            </h1>
+        </div>
+    </section>
 </body>
+
+<script src="./script.js"></script>
 
 </html>
