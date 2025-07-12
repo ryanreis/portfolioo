@@ -3,44 +3,134 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Trocar idioma com bandeiras</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ryan dos Reis</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-    <div id="lang-switcher">
-        <img src="https://flagcdn.com/br.svg" alt="Brasil" class="flag selected" id="br-flag" />
-        <img src="https://flagcdn.com/us.svg" alt="Estados Unidos" class="flag" id="us-flag" />
-    </div>
+    <header>
+        <nav class="menu">
+            <div class="lang-switcher">
+                <img src="./img/icons8-brasil-48.png" alt="Português" id="pt-btn" class="flag" />
+                <img src="./img/icons8-usa-48.png" alt="English" id="en-btn" class="flag" />
+            </div>
+            <ul>
+                <li><a href="#inicio" class="menu-link lang" data-pt="INÍCIO" data-en="HOME">INÍCIO</a></li>
+                <li><a href="#projetos" class="menu-link lang" data-pt="PROJETOS" data-en="PROJECTS">PROJETOS</a></li>
+                <li><a href="#contato" class="menu-link lang" data-pt="CONTATOS" data-en="CONTACT">CONTATOS</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="logo">
-        <img src="./img/Imagem do WhatsApp de 2025-07-09 à(s) 02.22.25_e7cdd725.jpg" alt="" class="flutuante">
-    </div>
+    <main id="inicio">
+        <section class="sobre">
+            <div class="foto-container">
+                <img src="./img/Imagem do WhatsApp de 2025-07-09 à(s) 02.22.24_5141f2b0.jpg" alt="Ryan dos Reis"
+                    class="foto" />
+                <p class="nome">RYAN DOS REIS</p>
+            </div>
+            <div class="descricao">
+                <h2 class="lang" data-pt="SOBRE" data-en="ABOUT">SOBRE</h2>
+                <p class="lang"
+                    data-pt="Sou o Ryan, apaixonado por tecnologia e web design. Estou sempre buscando aprender e criar sites bonitos e funcionais para mostrar meus projetos e meu talento."
+                    data-en="I'm Ryan, passionate about technology and web design. I'm always learning and building clean, functional websites to showcase my work and creativity.">
+                    Sou o Ryan, apaixonado por tecnologia e web design...
+                </p>
+            </div>
+        </section>
 
-    <div id="content">
-        <p>Ryan Dos Reis</p>
-        <div class="caixa">
-            <p>Sou um desenvolvedor web e programador com conhecimentos em HTML, CSS, JavaScript e Java. Tenho foco em
-                criar sites responsivos, funcionais e com boa experiência para o usuário, além de desenvolver soluções
-                em Java para aplicações mais robustas.</p>
+        <div class="container-projetos">
+            <div class="projeto">
+                <img src="img/Captura de ecrã_12-7-2025_204227_127.0.0.1.jpeg" alt="Site 1">
+
+                <h3 class="lang" data-pt="Site para barbearia" data-en="Barbershop Website">
+                    Site para barbearia
+                </h3>
+
+                <p class="descricao lang" data-pt="Feito para agendamentos online."
+                    data-en="Built for online scheduling.">
+                    Feito para agendamentos online.
+                </p>
+
+                <a href="https://ryanreis.github.io/lojinhaaaa/" target="_blank" class="btn lang" data-pt="Ver site" data-en="View site">
+                    Ver site
+                </a>
+            </div>
+
+            <div class="projeto">
+                <img src="img/site1.png" alt="Site 1">
+
+                <h3 class="lang" data-pt="Site para barbearia" data-en="Barbershop Website">
+                    Site para barbearia
+                </h3>
+
+                <p class="descricao lang" data-pt="Feito para agendamentos online."
+                    data-en="Built for online scheduling.">
+                    Feito para agendamentos online.
+                </p>
+
+                <a href="https://site1.com" target="_blank" class="btn lang" data-pt="Ver site" data-en="View site">
+                    Ver site
+                </a>
+            </div>
+
+            <div class="projeto">
+                <img src="img/site1.png" alt="Site 1">
+
+                <h3 class="lang" data-pt="Site para barbearia" data-en="Barbershop Website">
+                    Site para barbearia
+                </h3>
+
+                <p class="descricao lang" data-pt="Feito para agendamentos online."
+                    data-en="Built for online scheduling.">
+                    Feito para agendamentos online.
+                </p>
+
+                <a href="https://site1.com" target="_blank" class="btn lang" data-pt="Ver site" data-en="View site">
+                    Ver site
+                </a>
+            </div>
         </div>
-    </div>
 
-    <section class="tela">
-        <div>
-            <h1>
-                Projetos
-            </h1>
-        </div>
+
+    </main>
+
+
+    <section class="icones-codigos">
+        <img src="./img/OPA.png" alt="HTML, CSS e JavaScript" />
     </section>
-</body>
 
-<script src="./script.js"></script>
+    <section class="skills-descricao">
+        <p class="lang"
+            data-pt="Tenho conhecimento em HTML5 para estruturar páginas, CSS3 para deixá-las bonitas e responsivas, e JavaScript para adicionar interatividade e dinamismo aos sites."
+            data-en="I have experience with HTML5 for structure, CSS3 for beautiful responsive layouts, and JavaScript for interactivity and dynamic features.">
+            Tenho conhecimento em HTML5 para estruturar páginas...
+        </p>
+    </section>
+
+    <div class="caixa-contato">
+        <h2 class="lang" data-pt="Fale comigo" data-en="Contact me">Fale comigo</h2>
+
+        <input type="text" id="nome" placeholder="Seu nome" class="lang"
+       data-pt="Seu nome" data-en="Your name">
+
+        <textarea id="mensagem" placeholder="Sua mensagem..." class="lang" data-pt="Sua mensagem..."
+            data-en="Your message..."></textarea>
+
+        <button onclick="enviarMensagem()" class="lang" data-pt="Enviar no WhatsApp" data-en="Send on WhatsApp">
+            Enviar no WhatsApp
+        </button>
+    </div>
+
+    <footer id="contato">
+        <p class="lang" data-pt="Contato: seuemail@exemplo.com" data-en="Contact: youremail@example.com">
+            Contato: seuemail@exemplo.com
+        </p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
 
 </html>
