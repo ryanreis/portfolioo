@@ -1,38 +1,47 @@
-const brFlag = document.getElementById('br-flag');
-const usFlag = document.getElementById('us-flag');
-const content = document.getElementById('content');
+function validarCPF() {
+  const input = document.getElementById("cpf");
+  const resultado = document.getElementById("resultado");
 
-brFlag.addEventListener('click', () => {
-    setLanguage('br');
-});
+  // Remove tudo que não for número
+  const cpf = input.value.replace(/\D/g, '');
 
-usFlag.addEventListener('click', () => {
-    setLanguage('us');
-});
+  // Validação básica de comprimento e sequência repetida
+  if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) {
+    resultado.textContent = "CPF inválido";
+    resultado.className = "resultado invalido";
+    return;
+  }
 
-function setLanguage(lang) {
-    if (lang === 'br') {
-        content.innerHTML = `
-        <p>Ryan Dos Reis</p>
-        <div class="caixa">
-            <p>Sou um desenvolvedor web e programador com conhecimentos em HTML, CSS, JavaScript e Java. Tenho foco em criar sites responsivos, funcionais e com boa experiência para o usuário, além de desenvolver soluções em Java para aplicações mais robustas.</p>
-        </div>
-        `;
-        brFlag.classList.add('selected');
-        usFlag.classList.remove('selected');
-        document.body.classList.remove('en');
-        document.body.classList.add('br');
+  // Calcula o primeiro dígito verificador
+  let soma = 0;
+  for (let i = 0; i < 9; i++) {
+    soma += parseInt(cpf.charAt(i)) * (10 - i);
+  }
 
-    } else if (lang === 'us') {
-        content.innerHTML = `
-        <p>Ryan Dos Reis</p>
-        <div class="caixa">
-            <p>I am a web developer and programmer with knowledge in HTML, CSS, JavaScript, and Java. I focus on creating responsive, functional websites with a good user experience, as well as developing solutions in Java for more robust applications.</p>
-        </div>
-        `;
-        usFlag.classList.add('selected');
-        brFlag.classList.remove('selected');
-        document.body.classList.remove('br');
-        document.body.classList.add('en');
-    }
+  let dig1 = 11 - (soma % 11);
+  if (dig1 >= 10) dig1 = 0;
+
+  if (dig1 !== parseInt(cpf.charAt(9))) {
+    resultado.textContent = "CPF inválido";
+    resultado.className = "resultado invalido";
+    return;
+  }
+
+  // Calcula o segundo dígito verificador
+  soma = 0;
+  for (let i = 0; i < 10; i++) {
+    soma += parseInt(cpf.charAt(i)) * (11 - i);
+  }
+
+  let dig2 = 11 - (soma % 11);
+  if (dig2 >= 10) dig2 = 0;
+
+  if (dig2 !== parseInt(cpf.charAt(10))) {
+    resultado.textContent = "CPF inválido";
+    resultado.className = "resultado invalido";
+    return;
+  }
+
+  resultado.textContent = "CPF válido!";
+  resultado.className = "resultado valido";
 }
